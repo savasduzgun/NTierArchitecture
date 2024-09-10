@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NTierArchitecture.Entities.Models
 {
-    public sealed class User : IdentityUser
+    public sealed class User : IdentityUser<Guid>
     {
     }
 }
