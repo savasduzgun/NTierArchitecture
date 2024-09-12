@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitecture.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
