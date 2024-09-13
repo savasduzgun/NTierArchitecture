@@ -8,7 +8,7 @@ namespace NTierArchitecture.DataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.ToTable("Category");
+            builder.ToTable("Categories");
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Name).HasColumnType("varchar(100)");
         }
