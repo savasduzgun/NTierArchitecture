@@ -4,7 +4,7 @@ using NTierArchitecture.Entities.Repositories;
 
 namespace NTierArchitecture.DataAccess.Repositories
 {
-    internal sealed class Repository<T> : IRepository<T> where T : class
+    internal class Repository<T> : IRepository<T> where T : class
     {
         private readonly ApplicationDbContext _context;
 
