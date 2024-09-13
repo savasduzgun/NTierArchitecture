@@ -17,6 +17,8 @@ namespace NTierArchitecture.DataAccess.Context
             builder.Ignore<IdentityUserClaim<Guid>>();
             builder.Ignore<IdentityUserToken<Guid>>();
             builder.Ignore<IdentityRoleClaim<Guid>>();
+
+            builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
 }
