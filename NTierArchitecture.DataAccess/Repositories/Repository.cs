@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NTierArchitecture.DataAccess.Context;
+using NTierArchitecture.Entities.Models;
 using NTierArchitecture.Entities.Repositories;
 
 namespace NTierArchitecture.DataAccess.Repositories
@@ -43,4 +44,5 @@ namespace NTierArchitecture.DataAccess.Repositories
             _context.Update(entity);
         }
     }
+   
 }
