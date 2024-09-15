@@ -2,9 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NTierArchitecture.DataAccess.Context;
-using NTierArchitecture.DataAccess.Repositories;
 using NTierArchitecture.Entities.Models;
 using NTierArchitecture.Entities.Repositories;
+using Scrutor;
 
 namespace NTierArchitecture.DataAccess
 {
@@ -24,7 +24,7 @@ namespace NTierArchitecture.DataAccess
 
             services.AddScoped<IUnitOfWork>(s=> s.GetRequiredService<ApplicationDbContext>());
 
-            
+            services.Scan(selector => selector.FromAssemblies(typeof(DependencyInjection).Assembly).AddClasses(publicOnly: false).UsingRegistrationStrategy(RegistrationStrategy.Skip).AsMatchingInterface().WithScopedLifetime());
 
             return services;
         }
