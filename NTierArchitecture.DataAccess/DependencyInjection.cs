@@ -24,9 +24,7 @@ namespace NTierArchitecture.DataAccess
 
             services.AddScoped<IUnitOfWork>(s=> s.GetRequiredService<ApplicationDbContext>());
 
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+            
 
             return services;
         }
