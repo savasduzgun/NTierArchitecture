@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace NTierArchitecture.Business
 {
-    internal class DependencyInjection
+    public static class DependencyInjection
     {
+        public static IServiceCollection AddBusiness(this IServiceCollection services)
+        {
+            return services;
+        }
     }
 }
