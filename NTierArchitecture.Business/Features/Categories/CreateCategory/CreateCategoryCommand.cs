@@ -1,9 +1,5 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NTierArchitecture.Entities.Repositories;
 
 namespace NTierArchitecture.Business.Features.Categories.CreateCategory
 {
@@ -12,6 +8,14 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
 
     internal sealed class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand>
     {
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        public CreateCategoryCommandHandler(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
+        {
+            _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
+        }
         public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
