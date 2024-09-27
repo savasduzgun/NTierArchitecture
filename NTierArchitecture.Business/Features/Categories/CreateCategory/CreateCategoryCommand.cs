@@ -19,7 +19,7 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
         }
         public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var isCategoryNameExists = _categoryRepository.AnyAsync(p=>p.Name == request.Name, cancellationToken);
+            var isCategoryNameExists = await _categoryRepository.AnyAsync(p=>p.Name == request.Name, cancellationToken);
 
             Category category = new()
             {
