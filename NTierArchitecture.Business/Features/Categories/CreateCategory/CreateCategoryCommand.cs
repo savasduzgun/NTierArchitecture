@@ -18,7 +18,7 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
         }
         public async Task Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var isCategoryNameExists = _categoryRepository.AnyAsync(p=>p.Name == request.Name, cancellationToken);
         }
     }
 }
