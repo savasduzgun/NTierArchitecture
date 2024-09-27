@@ -25,6 +25,9 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
             {
                 Name = request.Name,
             };
+
+            await _categoryRepository.AddAsync(category, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
         }
     }
 }
