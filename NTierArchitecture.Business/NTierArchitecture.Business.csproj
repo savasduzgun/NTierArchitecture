@@ -14,4 +14,8 @@
     <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitecture.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Categories\UpdateCategory\" />
+  </ItemGroup>
+
 </Project>
