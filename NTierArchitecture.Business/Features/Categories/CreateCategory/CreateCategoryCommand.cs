@@ -21,13 +21,17 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
         {
             var isCategoryNameExists = await _categoryRepository.AnyAsync(p=>p.Name == request.Name, cancellationToken);
 
+            if (isCategoryNameExists) 
+            {
+                throw new ArgumentException("Bu kategori adı daha önce oluşturulmuş!");
+            }
             Category category = new()
             {
                 Name = request.Name,
             };
 
-            await _categoryRepository.AddAsync(category, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
+            await _categoryRepository.AddAsync(category, cancellationToken); //memory alır
+            await _unitOfWork.SaveChangesAsync(cancellationToken); //database kaydeder
         }
     }
 }
