@@ -34,6 +34,10 @@ namespace NTierArchitecture.Business.Features.Categories.UpdateCategory
                 {
                     throw new ArgumentException("Bu kategori adı daha önce oluşturulmuş!");
                 }
+
+                category.Name = request.Name;
+
+                await _unitOfWork.SaveChangesAsync(cancellationToken);
             }
         }
     }
