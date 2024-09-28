@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using NTierArchitecture.Entities.Models;
 using NTierArchitecture.Entities.Repositories;
 
 namespace NTierArchitecture.Business.Features.Categories.UpdateCategory
@@ -17,9 +18,13 @@ namespace NTierArchitecture.Business.Features.Categories.UpdateCategory
             _unitOfWork = unitOfWork;
         }
 
-        public Task Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            Category category = await _categoryRepository.GetByIdAsync(p=>p.Id == request.Id, cancellationToken);
+            if (category is null) 
+            {
+                throw new ArgumentException("Kategori bulunamadı!");
+            }
         }
     }
 }
