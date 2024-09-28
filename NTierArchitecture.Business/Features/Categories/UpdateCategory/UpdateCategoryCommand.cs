@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace NTierArchitecture.Business.Features.Categories.UpdateCategory
 {
-    internal class UpdateCategoryCommand
-    {
-    }
+    public sealed record UpdateCategoryCommand(
+        Guid Id,
+        string Name): IRequest;
+        
+    
 }
