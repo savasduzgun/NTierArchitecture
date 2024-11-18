@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using NTierArchitecture.Entities.Models;
 
 namespace NTierArchitecture.Business.Features.Products.GetProducts
 {
-    internal class GetProductsQuery
-    {
-    }
+    public sealed record class GetProductsQuery() : IRequest<List<Product>>;
 }
