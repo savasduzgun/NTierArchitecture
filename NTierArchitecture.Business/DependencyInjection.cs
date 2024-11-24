@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace NTierArchitecture.Business
 {
@@ -10,6 +11,9 @@ namespace NTierArchitecture.Business
             {
                 cfr.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
             });
+
+            //tüm validator kurallarının tanınmasını sağlar.
+            services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
             return services;
         }
     }
