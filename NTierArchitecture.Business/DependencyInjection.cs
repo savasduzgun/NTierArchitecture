@@ -12,7 +12,7 @@ namespace NTierArchitecture.Business
                 cfr.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
             });
 
-            //tüm validator kurallarının tanınmasını sağlar.
+            //mevcut katmanın assembly si verilerek tüm validator kurallarının tanınmasını sağlar.
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
             return services;
         }
