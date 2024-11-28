@@ -3,7 +3,7 @@
 namespace NTierArchitecture.Business.Features.Products.CreateProduct
 {
     public sealed record CreateProductCommand(
-         string Name,
+        string Name,
         decimal Price,
         int Quantity,
         Guid CategoryId) : IRequest;
