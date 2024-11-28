@@ -16,8 +16,4 @@
     <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitecture.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Behaviors\" />
-  </ItemGroup>
-
 </Project>
