@@ -14,6 +14,8 @@ namespace NTierArchitecture.Business
 
             //mevcut katmanın assembly si verilerek tüm validator kurallarının tanınmasını sağlar.
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
+
+            services.AddAutoMapper(typeof(DependencyInjection).Assembly);
             return services;
         }
     }
