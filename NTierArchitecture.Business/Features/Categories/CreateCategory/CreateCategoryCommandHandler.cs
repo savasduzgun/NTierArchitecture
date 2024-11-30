@@ -33,7 +33,7 @@ namespace NTierArchitecture.Business.Features.Categories.CreateCategory
 
             //yukarıdaki yerine mapper kullanıldı.
 
-            //request i alıp category e çevirip geri verir.
+            //request i alıp category e çevirip geri verir. Category i class ında id guid ise doldurmamız gerekir.
             Category category = _mapper.Map<Category>(request);
 
             await _categoryRepository.AddAsync(category, cancellationToken); //memory alır
