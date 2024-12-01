@@ -36,7 +36,7 @@ namespace NTierArchitecture.Business.Features.Categories.UpdateCategory
 
                 //category.Name = request.Name;
                 //aşağıda mapper kullanıldı
-                _mapper.Map(request, category); //sadece requestten gelenleri günceller
+                _mapper.Map(request, category); //sadece requestten gelen değişen alanları günceller
 
                 await _unitOfWork.SaveChangesAsync(cancellationToken);
             }
