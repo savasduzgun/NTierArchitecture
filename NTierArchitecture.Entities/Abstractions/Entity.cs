@@ -1,6 +1,6 @@
 ﻿namespace NTierArchitecture.Entities.Abstractions
 {
-    internal abstract class Entity
+    public abstract class Entity
     {
         public Guid Id { get; set; }
         public Entity()
