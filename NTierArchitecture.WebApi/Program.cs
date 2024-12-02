@@ -1,15 +1,20 @@
+//dependency injection kýsmý (eðer bir class istenirse o class ýn instance türeten yapýlar)
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//middleware kýsmý (request yapýldýðýnda çalýþan kontrol ve benzeri iþlemlerri yaptýktan sonra, sonraki middleware leri tetikleyip iþlemleri gerçekleþtiren kýsým)
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
