@@ -1,6 +1,5 @@
-
-
 using NTierArchitecture.Business;
+using NTierArchitecture.DataAccess;
 
 //dependency injection kýsmý (eðer bir class istenirse o class ýn instance türeten yapýlar)
 
@@ -8,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddBusiness();
+builder.Services.AddDataAccess(builder.Configuration);
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
