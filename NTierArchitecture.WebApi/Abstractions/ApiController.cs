@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NTierArchitecture.WebApi.Abstractions
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ApiController : ControllerBase
+    public abstract class ApiController : ControllerBase
     {
     }
 }
