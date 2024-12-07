@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\NTierArchitecture.Business\NTierArchitecture.Business.csproj" />
     <ProjectReference Include="..\NTierArchitecture.DataAccess\NTierArchitecture.DataAccess.csproj" />
   </ItemGroup>
