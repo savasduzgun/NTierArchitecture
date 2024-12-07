@@ -8,7 +8,7 @@ namespace NTierArchitecture.WebApi.Abstractions
     [ApiController]
     public abstract class ApiController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        public readonly IMediator _mediator;
 
         protected ApiController(IMediator mediator)
         {
