@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using NTierArchitecture.Business.Behaviors;
 
 namespace NTierArchitecture.Business
 {
@@ -10,6 +11,7 @@ namespace NTierArchitecture.Business
             services.AddMediatR(cfr =>
             {
                 cfr.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
+                cfr.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
 
             //mevcut katmanın assembly si verilerek tüm validator kurallarının tanınmasını sağlar.
