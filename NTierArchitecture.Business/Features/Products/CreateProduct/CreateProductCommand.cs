@@ -6,5 +6,5 @@ namespace NTierArchitecture.Business.Features.Products.CreateProduct
         string Name,
         decimal Price,
         int Quantity,
-        Guid CategoryId) : IRequest;
+        Guid CategoryId) : IRequest<Unit>; //mediatr dan gelen Unit struct boş dönüş tipleri için kullanılır
 }
