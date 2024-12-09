@@ -1,9 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using NTierArchitecture.Business.Features.Categories.CreateCategory;
-using NTierArchitecture.Business.Features.Categories.GetCategories;
-using NTierArchitecture.Business.Features.Categories.RemoveCategoryById;
-using NTierArchitecture.Business.Features.Categories.UpdateCategory;
 using NTierArchitecture.Business.Features.Products.CreateProduct;
 using NTierArchitecture.Business.Features.Products.GetProducts;
 using NTierArchitecture.Business.Features.Products.RemoveProductById;
