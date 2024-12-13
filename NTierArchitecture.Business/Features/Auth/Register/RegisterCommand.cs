@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace NTierArchitecture.Business.Features.Auth.Register
 {
-    internal class RegisterCommand
-    {
-    }
+    //request içerisinde kullanıcı kaydı yapmak için gerekli olan verileri ister
+    public sealed record RegisterCommand(
+        string Name,
+        string Lastname,
+        string Email,
+        string Password): IRequest<Unit>;
 }
