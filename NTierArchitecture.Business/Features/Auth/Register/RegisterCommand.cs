@@ -7,5 +7,6 @@ namespace NTierArchitecture.Business.Features.Auth.Register
         string Name,
         string Lastname,
         string Email,
+        string UserName,
         string Password): IRequest<Unit>;
 }
