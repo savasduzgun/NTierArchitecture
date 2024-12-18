@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using NTierArchitecture.Business.Features.Auth.Register;
+using NTierArchitecture.WebApi.Abstractions;
 
 namespace NTierArchitecture.WebApi.Controllers
 {
-    public class AuthController : Controller
+    public sealed class AuthController : ApiController
     {
-        public IActionResult Index()
+        public AuthController(IMediator mediator) : base(mediator)
         {
-            return View();
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Register(RegisterCommand request, CancellationToken cancellationToken)
+        {
+            await _mediator.Send(request, cancellationToken);
+            return NoContent();
         }
     }
 }
