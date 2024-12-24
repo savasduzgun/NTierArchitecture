@@ -8,5 +8,6 @@ namespace NTierArchitecture.Business.Features.Auth.Login
 {
     internal class LoginCommand
     {
+
     }
 }
